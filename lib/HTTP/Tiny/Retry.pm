@@ -8,6 +8,8 @@ use strict;
 use warnings;
 use Log::ger;
 
+our $VERSION=0.001;
+
 use parent 'HTTP::Tiny';
 
 sub request {
