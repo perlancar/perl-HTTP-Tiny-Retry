@@ -10,6 +10,20 @@ use Log::ger;
 
 use parent 'HTTP::Tiny';
 
+sub new {
+    my ($class, %attrs) = @_;
+
+    my %our_attrs;
+    for ("retries", "retry_delay") {
+        $our_attrs{$_} = delete $attrs{$_}
+            if exists $attrs{$_};
+    }
+
+    my $self = $class->SUPER::new(%attrs);
+    $self->{$_} = $our_attrs{$_} for keys %our_attrs;
+    $self;
+}
+
 sub request {
     my ($self, $method, $url, $options) = @_;
 
