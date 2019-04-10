@@ -8,6 +8,8 @@ use strict;
 use warnings;
 use Log::ger;
 
+use Time::Hires qw(sleep);
+
 use parent 'HTTP::Tiny';
 
 sub new {
@@ -37,7 +39,7 @@ sub request {
         return $res if $res->{status} !~ /\A[5]/;
         last if $retries >= $self->{retries};
         $retries++;
-        log_trace "Failed requesting %s (%s - %s), retrying in %d second(s) (%d of %d) ...",
+        log_trace "Failed requesting %s (%s - %s), retrying in %.1f second(s) (%d of %d) ...",
             $url,
             $res->{status},
             $res->{reason},
