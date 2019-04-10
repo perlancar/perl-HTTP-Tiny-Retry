@@ -8,7 +8,7 @@ use strict;
 use warnings;
 use Log::ger;
 
-use Time::Hires qw(sleep);
+use Time::HiRes qw(sleep);
 
 use parent 'HTTP::Tiny';
 
