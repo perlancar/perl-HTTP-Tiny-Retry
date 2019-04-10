@@ -19,7 +19,7 @@ sub request {
     my $retries = 0;
     my $res;
     while (1) {
-        my $res = $self->SUPER::request($method, $url, $options);
+        $res = $self->SUPER::request($method, $url, $options);
         return $res if $res->{status} !~ /\A[5]/;
         last if $retries >= $self->{retries};
         $retries++;
