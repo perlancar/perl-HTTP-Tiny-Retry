@@ -72,3 +72,6 @@ Int. Used to set default for the L</retry_delay> attribute.
 L<HTTP::Tiny>
 
 L<HTTP::Tiny::Patch::Retry>, patch version of this module.
+
+L<HTTP::Tiny::CustomRetry> and L<HTTP::Tiny::Patch::CustomRetry> for
+customizable retry/backoff strategies.
