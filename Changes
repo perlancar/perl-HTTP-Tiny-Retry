@@ -1,14 +1,14 @@
-0.004   2019-04-10 (PERLANCAR)
+0.004   2019-04-10  Released-By: PERLANCAR
 
 	- Allow subsecond delay.
 
 
-0.003   2019-04-10 (PERLANCAR)
+0.003   2019-04-10  Released-By: PERLANCAR
 
 	- [bugfix] HTTP::Tiny didn't store our attributes.
 
 
-0.002   2019-04-10 (PERLANCAR)
+0.002   2019-04-10  Released-By: PERLANCAR
 
         - [bugfix] Fix setting default values (thanks Paul Lambert) [GH#1].
 
@@ -19,6 +19,6 @@
           HTTP::Tiny::Patch::CustomRetry.
 
 
-0.001   2018-12-09 (PERLANCAR)
+0.001   2018-12-09  Released-By: PERLANCAR
 
         - First release.
